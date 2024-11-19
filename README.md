@@ -1,3 +1,58 @@
+# Motion-I2V Setup Guide
+
+This guide will help you set up the Motion-I2V environment and run the application.
+
+## Steps to Set Up and Run Motion-I2V
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/svjack/Motion-I2V
+   cd Motion-I2V
+   ```
+
+2. **Create and Activate the Conda Environment:**
+   ```bash
+   conda env create -f env_edit.yaml
+   conda activate motioni2v
+   ```
+
+3. **Install Required Packages:**
+   ```bash
+   pip install ipykernel "httpx[socks]"
+   ```
+
+4. **Install the IPython Kernel:**
+   ```bash
+   python -m ipykernel install --user --name motioni2v --display-name "motioni2v"
+   ```
+
+5. **Clone the Model Repository:**
+   ```bash
+   git clone https://huggingface.co/wangfuyun/Motion-I2V
+   cp -r Motion-I2V/models models
+   ```
+
+6. **Run the Application:**
+   ```bash
+   python -m scripts.app
+   ```
+
+## Additional Notes
+
+- Ensure you have Conda installed on your system before proceeding with the setup.
+- The `env_edit.yaml` file contains the necessary dependencies for the environment.
+- The `motioni2v` environment will be used to run the application.
+
+Feel free to reach out if you encounter any issues during the setup process.
+
+## Backwards-moving car example
+
+![car](https://github.com/user-attachments/assets/9a180b4d-2846-45ec-8b65-2803e58193bf)
+
+
+![image](https://github.com/user-attachments/assets/f801b78b-9fd9-4c49-935e-870b7cfd5452)
+
+
 <div align="center">
 
 ## Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling
